@@ -1,22 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Careers - Benwiz Infoservices</title>
-  <link rel="icon" href="images/Benwiz%20Logo.png" type="image/png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Benwiz Infoservices</title>
+  <link rel="icon" href="images/Benwiz%20Logo.png" type="image/png" />
   <style>
-    body {
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
     }
     header, footer {
       background-color: #111;
       padding: 1rem 2rem;
       text-align: center;
+      z-index: 10;
+      position: relative;
     }
     header h1 {
       color: #f8d100;
@@ -36,25 +39,53 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .content {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
+    .video-container {
+      position: relative;
+      height: calc(100% - 150px);
+      overflow: hidden;
     }
-    .highlight {
-      background-color: #1a1a1a;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 8px;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
-    h2, .highlight h3 {
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
       color: #f8d100;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      animation: slideFadeIn 2s ease-out;
+    }
+    .overlay-text h2 {
+      margin: 0;
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+    .overlay-text p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    @keyframes slideFadeIn {
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;">
+<header>
+    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;" />
     <h1>Benwiz Infoservices</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -64,31 +95,8 @@
       <a href="careers.html">Careers</a>
     </nav>
   </header>
-  <section class="content">
-    <h2>Join Our Team</h2>
-    <p>At Benwiz Infoservices, we believe that our people are our greatest asset. We are always looking for dynamic professionals passionate about delivering value in the HR, Payroll, and IT consulting space.</p>
-    <div class="highlight">
-      <h3>Current Opportunities</h3>
-      <ul>
-        <li>HR Operations Specialist – India/US</li>
-        <li>Benefits Administrator – Remote</li>
-        <li>Recruitment Consultant – Contract/Freelance</li>
-        <li>IT Project Coordinator – US Shift</li>
-      </ul>
-      <p>If you don't see a matching role, feel free to reach out. We’re always open to onboarding the right talent.</p>
-    </div>
-    <div class="highlight">
-      <h3>Why Work at Benwiz?</h3>
-      <ul>
-        <li>Flexible Work Models (Remote, Hybrid)</li>
-        <li>Transparent Growth Pathways</li>
-        <li>Opportunities across India and the US</li>
-        <li>Inclusive and Collaborative Culture</li>
-      </ul>
-    </div>
-    <p>📧 Email your resume and a short note about yourself to <strong>support@benwizinfoservices.com</strong></p>
-  </section>
-  <footer>
+<main style="text-align:center; padding: 3rem;"><h2>Careers</h2><p>Explore exciting career opportunities at Benwiz Infoservices.</p></main>
+<footer>
     <p>&copy; 2025 Benwiz Infoservices. All rights reserved.</p>
   </footer>
 </body>

@@ -1,22 +1,25 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Benwiz Infoservices</title>
-  <link rel="icon" href="images/Benwiz%20Logo.png" type="image/png"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home - Benwiz Infoservices</title>
+  <link rel="icon" href="images/Benwiz%20Logo.png" type="image/png" />
   <style>
-    body {
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: 'Segoe UI', 'Roboto', sans-serif;
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
     }
     header, footer {
       background-color: #111;
       padding: 1rem 2rem;
       text-align: center;
+      z-index: 10;
+      position: relative;
     }
     header h1 {
       color: #f8d100;
@@ -36,19 +39,53 @@
     nav a:hover {
       text-decoration: underline;
     }
-    .content {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
+    .video-container {
+      position: relative;
+      height: calc(100% - 150px);
+      overflow: hidden;
     }
-    h2 {
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
       color: #f8d100;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      animation: slideFadeIn 2s ease-out;
+    }
+    .overlay-text h2 {
+      margin: 0;
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+    .overlay-text p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    @keyframes slideFadeIn {
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
+    }
+    footer {
+      background-color: #111;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
     }
   </style>
 </head>
 <body>
-  <header>
-    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;">
+<header>
+    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;" />
     <h1>Benwiz Infoservices</h1>
     <nav>
       <a href="index.html">Home</a>
@@ -58,12 +95,8 @@
       <a href="careers.html">Careers</a>
     </nav>
   </header>
-  <section class="content">
-    <h2>About Benwiz Infoservices</h2>
-    <p>Benwiz Infoservices is an HR Business Process Management & Consulting company. We combine deep industry knowledge in Benefits, HR, Recruitments, Immigration, HRO & IT Consulting Services. Since 2019, we have delivered a wide range of BPM solutions including HR Operations, Payroll, Talent Administration, and industry-specific benefits support. Our operations span across India and the United States.</p>
-    <p>We’re committed to helping businesses thrive by streamlining their workforce operations while ensuring legal compliance and a positive employee experience. At Benwiz, we bridge the gap between business strategy and operational efficiency with a human-first approach.</p>
-  </section>
-  <footer>
+<main style="text-align:center; padding: 3rem;"><h2>About Us</h2><p>Benwiz Infoservices is an HR Business Process Management & Consulting company.</p></main>
+<footer>
     <p>&copy; 2025 Benwiz Infoservices. All rights reserved.</p>
   </footer>
 </body>

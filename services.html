@@ -2,109 +2,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services - Benwiz Infoservices</title>
-  <meta name="description" content="Explore the full range of HR, Payroll, Benefits, Immigration, and Consulting services offered by Benwiz Infoservices.">
-  <meta name="keywords" content="HR Services, Payroll, Benefits, Immigration, Consulting, Benwiz">
-  <meta name="author" content="Benwiz Infoservices">
-  <link rel="icon" type="image/png" href="images/Benwiz Logo.png">
+  <link rel="icon" href="images/Benwiz%20Logo.png" type="image/png" />
   <style>
-    body {
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: 'Segoe UI', sans-serif;
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
     }
     header, footer {
       background-color: #111;
       padding: 1rem 2rem;
       text-align: center;
+      position: relative;
+      z-index: 10;
     }
     header h1 {
       color: #f8d100;
+      display: inline;
+      margin-left: 10px;
+    }
+    nav {
+      margin-top: 0.5rem;
     }
     nav a {
       color: #f8d100;
-      margin: 0 1rem;
+      margin: 0 0.7rem;
       text-decoration: none;
       font-weight: bold;
     }
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 1rem;
+    nav a:hover {
+      text-decoration: underline;
     }
-    h2 {
+    .video-container {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -30%);
+      text-align: center;
       color: #f8d100;
-      margin-top: 2rem;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      animation: slideFadeIn 2s ease-out;
     }
-    ul {
-      padding-left: 1.5rem;
+    .overlay-text h2 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    ul li {
-      margin-bottom: 0.75rem;
+    .overlay-text p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+    .services-section {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -10%);
+      max-width: 960px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 2rem;
+      border-radius: 10px;
+      color: #fff;
+    }
+    .services-section h3 {
+      color: #f8d100;
+      margin-bottom: 1rem;
+    }
+    .services-section ul {
+      padding-left: 1.2rem;
+    }
+    @keyframes slideFadeIn {
+      0% { opacity: 0; transform: translate(-50%, -40%); }
+      100% { opacity: 1; transform: translate(-50%, -30%); }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/Benwiz Logo.png" alt="Benwiz Logo" style="height: 60px;">
-    <h1>Our Services</h1>
+    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;" />
+    <h1>Benwiz Infoservices</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
-      <a href="careers.html">Careers</a>
+      <a href="services.html">Services</a>
       <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
     </nav>
   </header>
 
-  <main>
-    <h2>HR Business Process Management</h2>
-    <ul>
-      <li>HR Administration and Onboarding Support</li>
-      <li>Employee Engagement and Communication</li>
-      <li>Offboarding and Exit Documentation</li>
-      <li>Compliance with Local and International Labor Laws</li>
-    </ul>
-
-    <h2>Payroll & Benefits Administration</h2>
-    <ul>
-      <li>Payroll Processing & Reconciliation (India & US)</li>
-      <li>Benefits Enrollments, Audits, and COBRA Administration</li>
-      <li>Coordination with Carriers, Brokers, and Vendors</li>
-    </ul>
-
-    <h2>Recruitment & Talent Acquisition</h2>
-    <ul>
-      <li>Sourcing & Screening</li>
-      <li>ATS and Job Board Management</li>
-      <li>Candidate Engagement and Interview Coordination</li>
-    </ul>
-
-    <h2>Immigration & Global Mobility</h2>
-    <ul>
-      <li>US Work Visa Processing Support (H-1B, L-1, OPT/CPT)</li>
-      <li>Case Coordination & Documentation Collection</li>
-      <li>Experience working with Fragomen, Envoy, and more</li>
-    </ul>
-
-    <h2>IT Consulting & Support</h2>
-    <ul>
-      <li>Contract Staffing & Technical Screening</li>
-      <li>Remote and Onsite Resource Deployment</li>
-      <li>Support for SaaS tools like ADP, Paycom, Workday, Oracle, etc.</li>
-    </ul>
-
-    <h2>Tools & Platforms We Work With</h2>
-    <ul>
-      <li><strong>HR & Payroll Systems:</strong> ADP, Paycom, Paycor, Workday, Oracle PeopleSoft, Rippling</li>
-      <li><strong>Benefits Platforms:</strong> Employee Navigator, GoWell Benefits, PIOPAC Fidelity, Piedmont</li>
-      <li><strong>Screening Tools:</strong> HireRight, First Advantage, Sterling, USAFact, Evance Backcheck, Accurate</li>
-      <li><strong>Recruitment:</strong> LinkedIn, Dice, Monster, CareerBuilder</li>
-      <li><strong>Workflow Tools:</strong> Monday.com, Echo Payments, LYNX</li>
-    </ul>
-  </main>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="media/hero.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-text">
+      <h2>Delivering Results</h2>
+      <p>Streamlining Operations</p>
+    </div>
+    <section class="services-section">
+      <h3>Our Services Include:</h3>
+      <ul>
+        <li>HR Business Process Management</li>
+        <li>Benefits Administration (including ICHRA)</li>
+        <li>Payroll and Compliance Support</li>
+        <li>Talent Administration & Recruitment</li>
+        <li>Immigration and HRO Consulting</li>
+        <li>IT & Platform Consulting (ADP, Workday, Oracle, etc.)</li>
+      </ul>
+    </section>
+  </div>
 
   <footer>
     <p>&copy; 2025 Benwiz Infoservices. All rights reserved.</p>

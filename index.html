@@ -4,72 +4,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services - Benwiz Infoservices</title>
+  <title>Home - Benwiz Infoservices</title>
+  <link rel="icon" href="images/Benwiz%20Logo.png" type="image/png" />
   <style>
-    body {
-      background-color: #0d0d0d;
-      color: #f5f5f5;
-      font-family: Arial, sans-serif;
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
     }
-    header {
-      display: flex;
-      align-items: center;
-      padding: 1rem 2rem;
+    header, footer {
       background-color: #111;
-    }
-    header img {
-      height: 50px;
-      margin-right: 1rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      z-index: 10;
+      position: relative;
     }
     header h1 {
       color: #f8d100;
-      font-size: 1.8rem;
+      display: inline;
+      margin-left: 10px;
     }
-    main {
-      padding: 2rem;
+    nav {
+      margin-top: 0.5rem;
     }
-    h2 {
+    nav a {
       color: #f8d100;
-      margin-top: 2rem;
+      margin: 0 0.7rem;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
     }
-    ul {
-      line-height: 1.8;
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .video-container {
+      position: relative;
+      height: calc(100% - 150px);
+      overflow: hidden;
+    }
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .overlay-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: #f8d100;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      border-radius: 10px;
+      animation: slideFadeIn 2s ease-out;
+    }
+    .overlay-text h2 {
+      margin: 0;
+      font-size: 2.5rem;
+      line-height: 1.4;
+    }
+    .overlay-text p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #fff;
+    }
+    @keyframes slideFadeIn {
+      0% { opacity: 0; transform: translate(-50%, -60%); }
+      100% { opacity: 1; transform: translate(-50%, -50%); }
     }
     footer {
       background-color: #111;
-      color: #888;
+      color: #fff;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Benwiz Logo" />
+    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;" />
     <h1>Benwiz Infoservices</h1>
-    <nav style="margin-left:auto">
-      <a href="about.html" style="color:#f8d100; margin-right: 1rem; text-decoration: none;">About</a>
-      <a href="index.html" style="color:#f8d100; margin-right: 1rem; text-decoration: none;">Services</a>
-      <a href="contact.html" style="color:#f8d100; margin-right: 1rem; text-decoration: none;">Contact</a>
-      <a href="careers.html" style="color:#f8d100; text-decoration: none;">Careers</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="careers.html">Careers</a>
     </nav>
   </header>
 
-  <main>
-    <h2>Our Services</h2>
-    ... (truncated for brevity — full code already saved)
-  </main>
+  <div class="video-container">
+    <video autoplay muted loop>
+      <source src="media/social_u5341964465_sleek_black_background_futuristic_and_corporate_s_f299dd3b-a936-43f2-bcb5-1abc98b49a97_0.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div class="overlay-text">
+      <h2>Empowering Your People</h2>
+      <p>Elevating Your Business</p>
+    </div>
+  </div>
 
   <footer>
-    &copy; 2025 Benwiz Infoservices. All rights reserved. |
-    <a href="about.html" style="color:#f8d100">About</a> |
-    <a href="contact.html" style="color:#f8d100">Contact</a> |
-    <a href="careers.html" style="color:#f8d100">Careers</a> |
-    <a href="index.html" style="color:#f8d100">Services</a>
+    <p>&copy; 2025 Benwiz Infoservices. All rights reserved.</p>
   </footer>
 </body>
 </html>
