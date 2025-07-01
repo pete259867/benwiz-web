@@ -1,31 +1,115 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Benwiz Infoservices</title>
-  <meta name="description" content="Contact Benwiz Infoservices for expert HR, Payroll, and Benefits consulting support.">
-  <meta name="keywords" content="Benwiz contact, HR help, India HR, US Payroll">
-  <meta name="author" content="Benwiz Infoservices">
-  <link rel="icon" href="images/Benwiz Logo.png" type="image/png">
+  <link rel="icon" type="image/png" href="images/Benwiz%20Logo.png">
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #f5f5f5;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #111;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: #f8d100;
+    }
+    nav a {
+      color: #f8d100;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    h2 {
+      color: #f8d100;
+    }
+    form {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border: none;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #f8d100;
+      color: #000;
+      border: none;
+      padding: 0.75rem;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .locations {
+      background-color: #1a1a1a;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Contact Us</h1>
+    <img src="images/Benwiz%20Logo.png" alt="Benwiz Logo" style="height: 60px; vertical-align: middle;">
+    <h1 style="display: inline; margin-left: 10px; color: #f8d100;">Benwiz Infoservices</h1>
     <nav>
-      <a href="index.html">Home</a> |
-      <a href="services.html">Services</a> |
-      <a href="about.html">About</a> |
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
       <a href="careers.html">Careers</a>
     </nav>
   </header>
-  <main>
-    <p>Email: support@benwizinfoservices.com</p>
-    <p>Phone (India): 9910992720</p>
-    <p>Phone (US): 7323085607</p>
-  </main>
+
+  <section class="content">
+    <h2>Contact Us</h2>
+    <form action="#" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="locations">
+      <h3>Our Office</h3>
+      <p><strong>United States:</strong><br>
+      155 Willowbrook Blvd, Ste 110 #4543,<br>
+      Wayne, New Jersey 07470, US</p>
+
+      <p><strong>Email:</strong> support@benwizinfoservices.com<br>
+      <strong>Phone (India):</strong> +91 9910992720<br>
+      <strong>Phone (US):</strong> +1 732-308-5607</p>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 Benwiz Infoservices</p>
+    <p>&copy; 2025 Benwiz Infoservices. All rights reserved.</p>
   </footer>
 </body>
 </html>
